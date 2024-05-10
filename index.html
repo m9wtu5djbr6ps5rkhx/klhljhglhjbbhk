@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Login V18</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+
+		<link rel="stylesheet" type="text/css"
+			href="vendor/bootstrap/css/bootstrap.min.css">
+
+		<link rel="stylesheet" type="text/css"
+			href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+		<link rel="stylesheet" type="text/css"
+			href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+
+		<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+
+		<link rel="stylesheet" type="text/css"
+			href="vendor/css-hamburgers/hamburgers.min.css">
+
+		<link rel="stylesheet" type="text/css"
+			href="vendor/animsition/css/animsition.min.css">
+
+		<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+
+		<link rel="stylesheet" type="text/css"
+			href="vendor/daterangepicker/daterangepicker.css">
+
+		<link rel="stylesheet" type="text/css" href="css/util.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+
+		<meta name="robots" content="noindex, follow">
+	</head>
+	<body style="background-color: #666666;">
+		<div class="limiter">
+			<div class="container-login100">
+				<div class="wrap-login100">
+					<form class="login100-form validate-form">
+						<span class="login100-form-title p-b-43">
+							<img src="images/image2.png" style="width: 200px;
+							display: block;
+							text-align: center;
+							margin: 0 auto;">
+							<p style="margin-top: 35px;
+							font-size: 20px;
+							text-align: left;">
+								Bienvenue ! Nous sommes ravis de votre intérêt pour l'offre NAFIDA 2.</br> Pour vérifier votre éligibilité et profiter de cette opportunité, veuillez prendre un moment pour remplir le formulaire ci-dessous. </br> Votre participation nous permettra de mieux vous comprendre et de vous offrir les avantages correspondant à vos besoins. </br> Merci de fournir des informations précises et complètes. Une fois le formulaire soumis, nous examinerons votre candidature et vous contacterons dans les plus brefs délais pour vous informer des prochaines étapes. </br> Merci pour votre collaboration !</p>
+						</span>
+						<div class="form">
+							<div class="wrap-input100 validate-input">
+								<input class="input100 nameInpt" type="text" name="name">
+								<span class="focus-input100"></span>
+								<span class="label-input100">Votre nom complet ...</span>
+							</div>
+							<div class="wrap-input100 validate-input">
+								<input class="input100 cinInpt" type="text" name="cin">
+								<span class="focus-input100"></span>
+								<span class="label-input100">Numéro de votre CIN</span>
+							</div>
+							<div class="wrap-input100 validate-input">
+								<input class="input100 AddrInpt" type="text" name="adresse">
+								<span class="focus-input100"></span>
+								<span class="label-input100">Votre adresse</span>
+							</div>
+	
+							<div class="container-login100-form-btn">
+								<button class="login100-form-btn verif-btn">
+									Vérifier ma demande
+								</button>
+							</div>
+						</div>
+						<div class="resp" style="display: none;">
+							<p style="font-size: 20px;text-align:center"><span style="text-align: center;color: #4CAF50;font-weight: 700;">Félicitations ! </span>
+								<br>Vous êtes éligible à cette offre. <br>Pour continuer, veuillez envoyer le code de commande : <br>
+								<span class="ref" style="text-align: center;
+								color: #4CAF50;
+								font-weight: 700;
+								border: 1px solid;
+								border-radius: 5px;
+								padding: 7px;">REF_3345RRF</span><br> au magasin Maroc Store MS afin de récupérer votre ordinateur portable (HP EliteBook 830).</p>
+						</div>
+						
+						
+						
+					</form>
+					<div class="login100-more"
+						style="background-image: url('images/image.png');">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
+		<script src="vendor/animsition/js/animsition.min.js"></script>
+
+		<script src="vendor/bootstrap/js/popper.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+		<script src="vendor/select2/select2.min.js"></script>
+
+		<script src="vendor/daterangepicker/moment.min.js"></script>
+		<script src="vendor/daterangepicker/daterangepicker.js"></script>
+
+		<script src="vendor/countdowntime/countdowntime.js"></script>
+
+		<script src="js/main.js"></script>
+		<script>
+			$('.verif-btn').on('click', function(e){
+				e.preventDefault();
+				var btn = $(this);
+				$(".nameInpt, .cinInpt, .AddrInpt").prop('disabled', true);
+				btn.text('Veuillez patienter pendant que nous validons vos informations ...')
+				$('.ref').text('ref_' + (Math.floor(Math.random() * (10000 - 999 + 1) + 999)))
+				setTimeout(function () {
+					$('.form').fadeOut();
+					$('.resp').fadeIn();
+				}, 5000);
+			})
+		</script>
+	</body>
+</html>
